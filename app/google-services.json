@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "94204789203",
+    "project_id": "femaleapp-bc751",
+    "storage_bucket": "femaleapp-bc751.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94204789203:android:b10cb759bf652657d12f26",
+        "android_client_info": {
+          "package_name": "com.androidmasters.femaleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94204789203-d6b8g2u37p2k360qpvo97drhec5lv5r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNmpwGkqRVn4C_DzJyK43uk2oRtQn7EbM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94204789203-d6b8g2u37p2k360qpvo97drhec5lv5r7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
