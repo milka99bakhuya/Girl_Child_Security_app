@@ -6,22 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".AdminDashboard"
     android:id="@+id/drawer_dashboard">
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Welcome Admin"
-
-        app:layout_constraintT="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <include
         android:layout_width="match_parent"

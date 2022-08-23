@@ -9,30 +9,25 @@
     android:layout_height="match_parent"
     tools:context=".UserDashboard">
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="UserDashboard"
-        app:layout_constraintT="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
     <include
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="parent"
         layout="@layout/drawer_toolbar"/>
 
-
     <include
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="parent"
         layout="@layout/content_user"/>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_user"
+        app:menu="@menu/menu_drawer"
+        app:headerLayout="@layout/drawer_header"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
