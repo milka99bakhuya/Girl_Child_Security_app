@@ -20,7 +20,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class AdminDashboard extends AppCompatActivity implements
-        NavigationView.OnNavigationItemSelectedListener,SecondFragment.onFragmentSelectedBtnSelected
+        NavigationView.OnNavigationItemSelectedListener,
+        SecondFragment.onFragmentSelectedBtnSelected, Admin_add_police_fragment.onFragmentSelectedBtnSelected
 
 
 
@@ -94,6 +95,31 @@ public class AdminDashboard extends AppCompatActivity implements
             fragmentTransaction.replace(R.id.container_admin,new Admin_add_police_fragment() );
             fragmentTransaction.commit();
         }
+        if(item.getItemId()==R.id.view_police_stations)
+        {
+            fragmentManager=getSupportFragmentManager();
+            fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_admin,new Admin_view_police() );
+            fragmentTransaction.commit();
+        }
+
+        if(item.getItemId()==R.id.view_user)
+        {
+            fragmentManager=getSupportFragmentManager();
+            fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_admin,new Admin_view_Users() );
+            fragmentTransaction.commit();
+        }
+
+        if(item.getItemId()==R.id.view_victims)
+        {
+            fragmentManager=getSupportFragmentManager();
+            fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_admin,new Admin_View_Victims());
+            fragmentTransaction.commit();
+        }
+
+
 
 
         return true;
@@ -101,6 +127,12 @@ public class AdminDashboard extends AppCompatActivity implements
 
     @Override
     public void admin_register_user() {
+        Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
+
+    }
+
+    @Override
+    public void admin_add_police() {
         Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
 
     }
