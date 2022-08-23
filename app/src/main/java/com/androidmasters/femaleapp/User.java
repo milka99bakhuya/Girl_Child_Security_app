@@ -3,6 +3,9 @@ package com.androidmasters.femaleapp;
 public class User {
     private String email_address,phone_number,full_name;
 
+    public User() {
+    }
+
     public User(String email_address, String phone_number, String full_name) {
         this.email_address = email_address;
         this.phone_number = phone_number;

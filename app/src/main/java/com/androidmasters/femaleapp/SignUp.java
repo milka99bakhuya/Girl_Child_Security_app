@@ -44,19 +44,7 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        //layouts
-        name_layout=findViewById(R.id.textInputLayout_name);
-        email_layout=findViewById(R.id.textInputLayout_email);
-        phone_layout=findViewById(R.id.textInputLayout_phone);
-        password_layout=findViewById(R.id.textInputLayout_pass);
-        confirmPassword_layout=findViewById(R.id.textInputLayout_confirmPass);
 
-        // editTexts
-        name_editText=findViewById(R.id.textInputEditText_name);
-        email_editText=findViewById(R.id.textInputEditText_email);
-        phone_editText=findViewById(R.id.textInputEditText_phone);
-        password_editText=findViewById(R.id.textInputEditText_pass);
-        confirmPassword_editText=findViewById(R.id.textInputEditText_confirm);
 
         btnSignUp=findViewById(R.id.btn_signUp);
         txtSignIn=findViewById(R.id.textSignIn);
