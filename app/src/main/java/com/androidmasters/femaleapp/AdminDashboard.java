@@ -13,12 +13,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Telephony;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class AdminDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class AdminDashboard extends AppCompatActivity implements
+        NavigationView.OnNavigationItemSelectedListener,SecondFragment.onFragmentSelectedBtnSelected
+
+
+
+
+{
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -45,7 +52,12 @@ public class AdminDashboard extends AppCompatActivity implements NavigationView.
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
-        if (firebaseUser == null) {
+
+        fragmentManager = getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.container_admin, new MainFragment());
+        fragmentTransaction.commit();
+        /*if (firebaseUser == null) {
             startActivity(new Intent(getApplicationContext(), Verify_email.class));
             finish();
             fragmentManager = getSupportFragmentManager();
@@ -53,7 +65,7 @@ public class AdminDashboard extends AppCompatActivity implements NavigationView.
             fragmentTransaction.add(R.id.container_admin, new MainFragment());
             fragmentTransaction.commit();
 
-        }
+        }*/
     }
 
     @Override
@@ -63,7 +75,7 @@ public class AdminDashboard extends AppCompatActivity implements NavigationView.
         {
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.add(R.id.container_admin,new MainFragment());
+            fragmentTransaction.replace(R.id.container_admin,new MainFragment());
             fragmentTransaction.commit();
         }
         if(item.getItemId()==R.id.add_user)
@@ -75,6 +87,21 @@ public class AdminDashboard extends AppCompatActivity implements NavigationView.
         }
 
 
+        if(item.getItemId()==R.id.add_police_station)
+        {
+            fragmentManager=getSupportFragmentManager();
+            fragmentTransaction=fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_admin,new Admin_add_police_fragment() );
+            fragmentTransaction.commit();
+        }
+
+
         return true;
+    }
+
+    @Override
+    public void admin_register_user() {
+        Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
+
     }
 }
