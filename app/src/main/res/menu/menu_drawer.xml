@@ -1,99 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:title="Home"
-        android:id="@+id/home"
-        android:icon="@drawable/ic_baseline_home">
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    </item>
-    <item
-        android:title="Users"
-        android:id="@+id/user"
-        android:icon="@drawable/ic_baseline_home">
-        <menu>
-            <item
-                android:title="Add User"
-                android:id="@+id/add_user"
-                android:icon="@drawable/ic_baseline_person_add_user">
-
-            </item>
-            <item
-                android:title="View Users"
-                android:id="@+id/view_user"
-                android:icon="@drawable/ic_baseline_group_24">
-
-            </item>
-        </menu>
-
-    </item>
-    <item
-        android:title="Police Station"
-        android:id="@+id/police_station"
-        android:icon="@drawable/ic_baseline_local_police_24">
-        <menu>
-            <item
-                android:title="Add Police Station"
-                android:id="@+id/add_police_station"
-                android:icon="@drawable/ic_baseline_local_police">
-
-            </item>
-            <item
-                android:title="View Police Stations"
-                android:id="@+id/view_police_stations"
-                android:icon="@drawable/ic_baseline_view_police">
-
-            </item>
-        </menu>
-
-    </item>
-    <item
-        android:title="View Victims"
-        android:id="@+id/victims"
-        android:icon= "@drawable/ic_baseline_victims">
-        <menu>
-            <item
-                android:title="Victims"
-                android:id="@+id/view_victims"
-                android:icon="@drawable/ic_victims">
-
-            </item>
-
-        </menu>
-
-
-    </item>
-    <item
-        android:title="Report"
-        android:id="@+id/Report"
-        android:icon="@drawable/ic_baseline_report">
-        <menu>
-            <item
-                android:title="Report"
-                android:id="@+id/reports"
-                android:icon="@drawable/ic_report">
-
-            </item>
-
-        </menu>
-
-
-
-    </item>
-
-    <item
-        android:title="Logout"
-        android:id="@+id/logout"
-        android:icon="@drawable/ic_baseline_exit_to_app_24">
-    <menu>
+        tools:ignore="MissingPrefix">
         <item
-            android:title="Logout"
-            android:id="@+id/exit"
-            android:icon="@drawable/ic_exit">
+            android:title="Home"
+            android:id="@+id/home"
+            android:icon="@drawable/ic_baseline_home">
+
+        </item>
+        <item
+            android:title="Users"
+            android:id="@+id/user"
+            android:icon="@drawable/ic_baseline_home">
+            <menu>
+                <item
+                    android:title="Add User"
+                    android:id="@+id/add_user"
+                    android:icon="@drawable/ic_baseline_person_add_user">
+
+                </item>
+                <item
+                    android:title="View Users"
+                    android:id="@+id/view_user"
+                    android:icon="@drawable/ic_baseline_group_24">
+
+                </item>
+            </menu>
+
+        </item>
+        <item
+            android:title="Police Station"
+            android:id="@+id/police_station"
+            android:icon="@drawable/ic_baseline_local_police_24">
+            <menu>
+                <item
+                    android:title="Add Police Station"
+                    android:id="@+id/add_police_station"
+                    android:icon="@drawable/ic_baseline_local_police">
+
+                </item>
+                <item
+                    android:title="View Police Stations"
+                    android:id="@+id/view_police_stations"
+                    android:icon="@drawable/ic_baseline_view_police">
+
+                </item>
+            </menu>
+
+        </item>
+        <item
+            android:title="View Victims"
+            android:id="@+id/victims"
+            android:icon= "@drawable/ic_baseline_victims">
+            <menu>
+                <item
+                    android:title="Victims"
+                    android:id="@+id/view_victims"
+                    android:icon="@drawable/ic_victims">
+
+                </item>
+
+            </menu>
+
+
+        </item>
+        <item
+            android:title="Report"
+            android:id="@+id/Report"
+            android:icon="@drawable/ic_baseline_report">
+            <menu>
+                <item
+                    android:title="Report"
+                    android:id="@+id/reports"
+                    android:icon="@drawable/ic_report">
+
+                </item>
+
+            </menu>
+
+
 
         </item>
 
-    </menu>
+        <item
+            android:title="Logout"
+            android:id="@+id/logout"
+            android:icon="@drawable/ic_baseline_exit_to_app_24">
+            <menu>
+                <item
+                    android:title="Logout"
+                    android:id="@+id/exit"
+                    android:icon="@drawable/ic_exit">
+
+                </item>
+
+            </menu>
 
 
-</item>
+        </item>
+
 </menu>
