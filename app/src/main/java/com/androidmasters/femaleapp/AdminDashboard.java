@@ -53,7 +53,6 @@ public class AdminDashboard extends AppCompatActivity implements NavigationView.
             fragmentTransaction.add(R.id.container_admin, new MainFragment());
             fragmentTransaction.commit();
 
-
         }
     }
 
