@@ -1,4 +1,4 @@
-package com.ongidideveloper.gosafe;
+package com.androidmasters.femaleapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -37,8 +37,8 @@ public class PoliceAdapter extends RecyclerView.Adapter<PoliceAdapter.MyViewHold
 
         Police police=list.get(position);
         holder.name.setText(police.getName());
-        holder.town.setText(police.getLocation());
-        holder.contact.setText(police.getEmergency_contacts());
+
+        holder.contact.setText(police.getPhone());
 
 
 
@@ -59,7 +59,6 @@ public class PoliceAdapter extends RecyclerView.Adapter<PoliceAdapter.MyViewHold
             super(itemView);
 
             name=itemView.findViewById(R.id.hospital_name);
-            town=itemView.findViewById(R.id.hospital_town);
             contact=itemView.findViewById(R.id.hospital_contact_list);
         }
     }

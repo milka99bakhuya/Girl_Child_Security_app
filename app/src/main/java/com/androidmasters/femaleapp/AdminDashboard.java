@@ -10,9 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.Telephony;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -32,7 +30,8 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AdminDashboard extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
-        SecondFragment.onFragmentSelectedBtnSelected, Admin_add_police_fragment.onFragmentSelectedBtnSelected
+        SecondFragment.onFragmentSelectedBtnSelected, Admin_add_police_fragment.onFragmentSelectedBtnSelected,
+        Admin_Home_Fragment.onFragmentEmergenceButtonClicked
 
 
 
@@ -82,7 +81,7 @@ public class AdminDashboard extends AppCompatActivity implements
 
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container_admin, new MainFragment());
+        fragmentTransaction.add(R.id.container_admin, new Admin_Home_Fragment());
         fragmentTransaction.commit();
 
 
@@ -107,7 +106,7 @@ public class AdminDashboard extends AppCompatActivity implements
         {
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_admin,new MainFragment());
+            fragmentTransaction.replace(R.id.container_admin,new Admin_Home_Fragment());
             fragmentTransaction.commit();
         }
         if(item.getItemId()==R.id.add_user)
@@ -130,7 +129,7 @@ public class AdminDashboard extends AppCompatActivity implements
         {
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_admin,new Admin_view_police() );
+            fragmentTransaction.replace(R.id.container_admin,new Admin_View_Police_Station()  );
             fragmentTransaction.commit();
         }
 
@@ -138,7 +137,7 @@ public class AdminDashboard extends AppCompatActivity implements
         {
             fragmentManager=getSupportFragmentManager();
             fragmentTransaction=fragmentManager.beginTransaction();
-            fragmentTransaction.replace(R.id.container_admin,new Admin_view_Users() );
+            fragmentTransaction.replace(R.id.container_admin,new Admin_View_Registered_User());
             fragmentTransaction.commit();
         }
 
@@ -331,6 +330,59 @@ public class AdminDashboard extends AppCompatActivity implements
 
 
 
+
+    }
+
+    @Override
+    public void load_home_fragment() {
+
+        fragmentManager=getSupportFragmentManager();
+        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container_admin,new Admin_Home_Fragment());
+        fragmentTransaction.commit();
+
+    }
+
+    @Override
+    public void load_add_fragment() {
+        fragmentManager=getSupportFragmentManager();
+        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container_admin,new SecondFragment());
+        fragmentTransaction.commit();
+
+    }
+
+    @Override
+    public void load_victim_fragment() {
+        fragmentManager=getSupportFragmentManager();
+        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container_admin,new Admin_View_Victims() );
+        fragmentTransaction.commit();
+
+    }
+
+    @Override
+    public void logout_fragment() {
+
+    }
+
+    @Override
+    public void load_view_users() {
+        fragmentManager=getSupportFragmentManager();
+        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container_admin,new Admin_View_Registered_User() );
+        fragmentTransaction.commit();
+
+    }
+
+    @Override
+    public void load_add_police() {
+
+
+        fragmentManager=getSupportFragmentManager();
+        fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container_admin,new Admin_add_police_fragment() );
+        fragmentTransaction.commit();
 
     }
 }

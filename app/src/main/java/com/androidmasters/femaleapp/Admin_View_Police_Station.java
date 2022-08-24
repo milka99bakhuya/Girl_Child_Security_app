@@ -1,4 +1,4 @@
-package com.ongidideveloper.gosafe;
+package com.androidmasters.femaleapp;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

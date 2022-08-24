@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/drawable/ic_baseline_delete_forever_24.xml" value="0.153" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/activity_admin_dashboard.xml" value="0.1953125" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/activity_main.xml" value="0.19375" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/activity_sign_in.xml" value="0.1" />
@@ -10,7 +11,9 @@
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/activity_user_dashboard.xml" value="0.209375" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/activity_verify_email.xml" value="0.25" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/admin_add_police_fragment.xml" value="0.209375" />
+        <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/admin_home_fragment.xml" value="0.209375" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/admin_view_police.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/admin_view_police_station.xml" value="0.1" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/admin_view_users.xml" value="0.209375" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/admin_view_victims.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/content_admin.xml" value="0.1" />
@@ -20,10 +23,15 @@
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/drawerheader.xml" value="0.1" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/drawertoolbar.xml" value="0.1" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/fragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/fragment_home.xml" value="0.1578125" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/fragment_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/fragment_second.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/user_card_view.xml" value="0.1" />
+        <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/layout/user_drawer_layout.xml" value="0.1" />
+        <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/menu/dashboardmenu.xml" value="0.209375" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/menu/menu_drawer.xml" value="0.209375" />
         <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/menu/menudrawer.xml" value="0.1" />
+        <entry key="..\:/Users/MILKA/FemaleApp/app/src/main/res/menu/user_menu.xml" value="0.1" />
       </map>
     </option>
   </component>

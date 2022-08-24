@@ -1,4 +1,4 @@
-package com.ongidideveloper.gosafe;
+package com.androidmasters.femaleapp;
 
 import android.app.Activity;
 import android.content.Context;
@@ -27,12 +27,14 @@ public class Admin_Home_Fragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view=inflater.inflate(R.layout.admin_home_fragment,container,false);
+        View view=inflater.inflate(R.layout.fragment_main,container,false);
 
         cardView_home=view.findViewById(R.id.card_view_home);
         cardView_victim=view.findViewById(R.id.card_view_victim);
 
         cardView_add_user=view.findViewById(R.id.card_view_user_adds);
+
+        cardView_settings=view.findViewById(R.id.card_view_settings);
 
         cardView_user=view.findViewById(R.id.card_view_user);
         cardView_logout=view.findViewById(R.id.card_view_logout);
@@ -85,6 +87,14 @@ public class Admin_Home_Fragment extends Fragment {
         });
 
 
+        cardView_settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.load_add_police();
+            }
+        });
+
+
         return view;
     }
 
@@ -106,6 +116,7 @@ public class Admin_Home_Fragment extends Fragment {
         public  void load_victim_fragment();
         public  void logout_fragment();
         public  void load_view_users();
+        public  void load_add_police();
 
     }
 }

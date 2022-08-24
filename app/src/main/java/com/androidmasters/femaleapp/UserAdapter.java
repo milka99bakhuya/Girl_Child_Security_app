@@ -1,4 +1,4 @@
-package com.ongidideveloper.gosafe;
+package com.androidmasters.femaleapp;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -27,7 +27,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> 
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View view= LayoutInflater.from(context).inflate(R.layout.user_card_view,parent,false);
-        return new UserAdapter.MyViewHolder(view);
+        return new MyViewHolder(view);
 
 
     }
@@ -36,7 +36,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         User user=list.get(position);
-        holder.name.setText(user.getName());
+        holder.name.setText(user.getFull_name());
         holder.email_Address.setText(user.getEmail_address());
         holder.contact.setText(user.getPhone_number());
 
