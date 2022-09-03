@@ -2,6 +2,7 @@ package com.androidmasters.femaleapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -10,7 +11,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -148,6 +152,43 @@ public class AdminDashboard extends AppCompatActivity implements
             fragmentTransaction.replace(R.id.container_admin,new Admin_View_Victims());
             fragmentTransaction.commit();
         }
+
+
+        if(item.getItemId()==R.id.exit)
+        {
+            AlertDialog.Builder alert=new AlertDialog.Builder(AdminDashboard.this);
+            alert.setMessage("Are you sure you want to logout ?");
+            alert.setTitle("END SESSION");
+            alert.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    // dismiss the alert
+
+                }
+            });
+
+            alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    FirebaseAuth.getInstance().signOut();
+                    Toast.makeText(AdminDashboard.this, "Logged out successfully", Toast.LENGTH_SHORT).show();
+
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(new Intent(getApplicationContext(),SignIn.class));
+
+                        }
+                    },1000);
+
+                }
+            });
+
+            alert.show();
+
+
+        }
+
 
 
 
