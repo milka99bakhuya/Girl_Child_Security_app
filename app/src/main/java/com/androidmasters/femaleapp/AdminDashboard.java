@@ -404,6 +404,38 @@ public class AdminDashboard extends AppCompatActivity implements
 
     @Override
     public void logout_fragment() {
+        AlertDialog.Builder alert=new AlertDialog.Builder(AdminDashboard.this);
+        alert.setMessage("Are you sure you want to logout ?");
+        alert.setTitle("END SESSION");
+        alert.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                // dismiss the alert
+
+            }
+        });
+
+        alert.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(AdminDashboard.this, "Logged out successfully", Toast.LENGTH_SHORT).show();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        startActivity(new Intent(getApplicationContext(),SignIn.class));
+
+                    }
+                },1000);
+
+            }
+        });
+
+        alert.show();
+
+
+
 
     }
 

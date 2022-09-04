@@ -12,82 +12,34 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
 public class FragmentHome extends Fragment {
-    private  onfragmentBtnSelected listener;
+
+
+    CardView cardView_home, cardView_add_guardian,cardView_tips,
+            cardView_view_guardian,cardView_emergency,cardView_logout;
+    private onFragmentEmergenceButtonClicked listener;
+
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view=inflater.inflate(R.layout.fragment_home,container,false);
-       /* Button start=view.findViewById(R.id.btnStart);
-        Button stop=view.findViewById(R.id.btnStop);
-        Button track=view.findViewById(R.id.sendLocation);
-        ImageView imageView=view.findViewById(R.id.imageView2);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
 
-        track.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listener.getLocation();
+        cardView_home=view.findViewById(R.id.card_view_home_user);
+        cardView_add_guardian=view.findViewById(R.id.card_view_user_adds);
 
-            }
-        });
+        cardView_tips=view.findViewById(R.id.card_view_user_tips);
 
-        imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                imageView.setImageResource(R.drawable.mic_on);
-                start.setText("RECORDING ...");
-            }
-        });
-        stop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                start.setText("START");
-                imageView.setImageResource(R.drawable.mic_off);
-                listener.stop_recording();
+        cardView_view_guardian=view.findViewById(R.id.card_view_user_guardian);
 
+        cardView_emergency=view.findViewById(R.id.send_emergency_user_button);
+        cardView_logout=view.findViewById(R.id.card_view_user_logout);
 
-            }
-        });
-
-        start.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //start.setVisibility(View.INVISIBLE);
-                imageView.setImageResource(R.drawable.mic_on);
-                start.setText("Recording ...");
-
-
-
-
-                listener.record_method();
-
-            }
-        });*/
         return view;
     }
 
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        if(context instanceof onfragmentBtnSelected)
-        {
-            listener= (onfragmentBtnSelected) context;
-
-        }
-        else {
-            throw new ClassCastException(context.toString() + "must implement listener");
-        }
-
-    }
-
-    public interface onfragmentBtnSelected
-    {
-        public  void record_method();
-        public void stop_recording();
-        public void getLocation();
-    }
 }
